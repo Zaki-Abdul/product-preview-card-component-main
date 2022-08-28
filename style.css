@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --Dark-cyan: hsl(158, 36%, 37%);
+--Cream: hsl(30, 38%, 92%);
+--Very-dark-blue: hsl(212, 21%, 14%);
+--Dark-grayish-blue: hsl(228, 12%, 48%);
+--White: hsl(0, 0%, 100%);
+}
+
+body {
+  min-height: 100vh;
+  font-size: 14px;
+  background-color: var(--Cream);
+}
+
+p {
+  width: 251px;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  color: var(--Dark-grayish-blue);
+  margin-bottom: 12px;
+}
+
+.card {
+  margin: 20px 12px 0px 12px;
+  background-color: var(--White);
+  border-radius: 10px 10px 10px 10px;
+  overflow: hidden;
+}
+
+.content {
+  padding-bottom: 20px;
+  margin: 10px 12px
+}
+
+img {
+  max-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+}
+
+h3 {
+  font-size: .9rem;
+  font-family:'Montserrat'sans-serif;
+  letter-spacing: .2rem;
+  color: var(--Dark-grayish-blue);
+  margin-bottom: 5px;
+}
+
+h1 {
+  font-family: Fraunces, sans-serif;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: .9;
+  color: var(--Very-dark-blue);
+  margin-bottom: 10px;
+}
+
+
+.price {
+  font-family: Fraunces, sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: var(--Dark-cyan);
+  margin-bottom: 12px;
+  margin-top: 10px;
+  position: relative;
+ 
+}
+
+.price span {
+  font-size: 13px;
+  text-decoration: line-through;
+  margin-left: 12px;
+  position: absolute;
+  bottom: 10px;
+  
+}
+
+
+button {
+  width: 12rem;
+  padding: 8px;
+  border: none;
+  border-radius: 7px;
+  background-color: var(--Dark-cyan);
+  color: var(--White);
+  font-weight: bolder;
+  cursor: pointer;
+  margin-top: 3px;
+  transition: all 0.15s;
+  
+}
+
+
+
+button:hover {
+  background-color: brown;
+}
+
+
+.desk {
+  display: none;
+}
+
+/* big screens */
+
+@media screen and (min-width: 768px) {
+  html, body {
+    height: 100%;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    display: flex;
+    align-items: center;
+    max-width: 700px;
+    border-radius: 15px;
+    overflow: hidden;
+    height: 500px;
+  }  
+  .image {
+    width: 350px;
+    height: 100%;
+  }
+  .content {
+    padding: 1.5rem;
+    width: 350px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
